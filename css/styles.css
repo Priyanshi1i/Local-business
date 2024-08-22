@@ -1,0 +1,138 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #0f0f0f;
+    background-color: #f0f4f8;
+    background-image: url('../images/background.jpg'); /* Updated background image */
+    background-size: cover; /* Make sure the image covers the entire page */
+    background-position: center;
+    background-attachment: fixed; /* Keeps the background in place when scrolling */
+}
+
+header {
+    position: relative;
+    
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    height: 300px; /* Set a fixed height */
+    padding-top: 100px; /* Adjust the padding to center text */
+    color: rgb(255, 255, 255);
+    animation: fadeInDown 2s;
+    z-index: 1;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 51, 5, 0.7); /* Semi-transparent overlay */
+    box-shadow: 0 4px 8px rgba(0, 0.9, 0, 0.9);
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+}
+
+/* Business Card Styles */
+.business-card {
+    background-color: rgba(43, 60, 14, 0.6); /* Dark olive green background with reduced opacity */
+    color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0.9, 0, 0.9);
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.business-card img {
+    max-width: 20%;
+    border-radius: 10px;
+}
+.business-card h3,
+.business-card p {
+    color: #ffffff; /* Bright yellow text for headings and paragraphs */
+}
+.business-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: rgb(2, 0, 0);
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2e5b31;
+}
+
+/* Review Card Styles */
+.review-card {
+    background-color: #413c1a;
+    border-left: 5px solid #3d603f;
+    padding: 3px;
+    color: #f0f4f8;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0.9, 0.9, 0.9, 0.9);
+    animation: slideInLeft 1s ease-out;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 30px;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
